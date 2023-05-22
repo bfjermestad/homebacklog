@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <%- include('./partials/head') %>
+      </head>
+    
+      <body>
+        <header>
+          <%- include('./partials/header') %>
+        </header>
+  <body>
+
+    <ul>
+        <table>
+            <tr>
+              <th>Task ID</th>
+              <th>Descrition</th> 
+              <th>Date</th>
+            </tr>
+                <% rader.forEach(function(columns) { %>
+            <tr>    
+                <% columns.forEach(function(column) { %>
+                    <td> <%= column.value %> </td>
+            <% }); %>
+            </tr>
+        <% }); %>
+        </table>
+    </ul>
+
+      <footer>
+        <%- include('./partials/footer') %>
+     </footer>
+
+  <!-- End page content -->
+</div>
+
+<script>
+// Script to open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+}
+ 
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+</script>
+
+</body>
+</html>
