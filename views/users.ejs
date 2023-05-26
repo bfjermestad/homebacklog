@@ -50,6 +50,11 @@
         <td> <%= new Date(columns[2].value).toLocaleDateString('no-NO') %></td> 
         <td> 
           <label>
+            <!-- Create a checkbox, and if clicked, store changes in database -->
+            <input type="checkbox" id="completed" name="completed" value="true"
+              onclick="location.href='/tasks/<%= columns[0].value %>/completed'">
+            <!-- If the task is completed, the checkbox is checked -->
+            
             <input type="checkbox" name="completed" <%= (columns[3].value) ? 'checked' : '' %>>
           </label>
         </td>
